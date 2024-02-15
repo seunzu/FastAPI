@@ -1,3 +1,26 @@
+"""
+Object Oriented Programming
+"""
+
+#1
+class Student:
+    pass
+
+student_1 = Student()
+student_2 = Student()
+
+student_1.first_name = 'Eric'
+student_1.last_name = 'Roby'
+student_1.major = 'Computer Science'
+
+student_2.first_name = 'John'
+student_2.last_name = 'Miller'
+student_2.major = 'Math'
+
+print(student_1)
+print(student_2)
+
+# 2
 class Student:
     number_of_students = 0
     school = 'Online School'
@@ -24,9 +47,17 @@ class Student:
         first_name, last_name, major = student_str.split('.')
         return cls(first_name, last_name, major)
 
-
 student_1 = Student('Eric', 'Roby', 'Computer Science')
 student_2 = Student('John', 'Miller', 'Math')
+
+print(f'Number of students = {Student.number_of_students}')
+print(student_1.school)
+print(student_2.school)
+Student.set_online_school('I use Google Hangouts for class!')
+print(student_1.school)
+print(student_2.school)
+
 new_student = 'Adil.Yutzy.English'
 student_3 = Student.split_students(new_student)
 print(student_3.fullname_major_school())
+
